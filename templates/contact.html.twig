@@ -4,12 +4,21 @@
 {% set page_title = 'Зв\'язатись' %}
 
 {% block content %}
+{% if is_broken %}
+    <div class="text-block-wrapper">
+        <p>Вибачте, наразі наша система прийому запитів не працює.</p>
+    </div>
+{% elseif is_done %}
+    <div class="text-block-wrapper">
+        <p>Дякуємо за звернення. Ваш запит збережено. Ми зв'яжемось з Вам, якщо будемо вважати за потрібне.</p>
+    </div>
+{% else %}
     <div class="text-block-wrapper">
         <p>Якщо Вам потрібна наша допомога, будь-ласка зв'яжіться з нами. Заповніть форму нижче.</p>
     </div>
 
     <div class="fancy-contact-block-wrapper">
-        <form class="form-element" method="post" action="cgi-bin/subscribe.cgi">
+        <form class="form-element" method="post" action="{{ menu_items.contact.url }}">
             <label class="input-wrapper">
                 <span class="label-wrapper"><span>Введіть свою E-mail адресу:</span></span>
                 <input type="email" name="email" size="45" required>
@@ -19,8 +28,9 @@
                 <input type="text" name="subject" size="60" required>
             </label>
             <div class="submit-wrapper">
-                <input type="submit" value="Надіслати запит">
+                <input type="submit" name="submit_request" value="Надіслати запит">
             </div>
         </form>
     </div>
+{% endif %}
 {% endblock %}

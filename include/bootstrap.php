@@ -12,13 +12,14 @@ $request = Request::createFromGlobals();
 /**
  * @return Response
  */
-function render_page($page_id) {
+function render_page($page_id, $context = []) {
     $twig = new Environment(new FilesystemLoader([__DIR__ . '/../templates']));
     $menu_items = require_once __DIR__ . '/menu.php';
 
-    $content = $twig->render("{$page_id}.html.twig", [
+    $context += [
         'menu_items' => $menu_items,
-    ]);
+    ];
+    $content = $twig->render("{$page_id}.html.twig", $context);
 
     return new Response($content);
 }
