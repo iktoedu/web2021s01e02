@@ -1,0 +1,26 @@
+{% extends "_page.html.twig" %}
+
+{% set current_page_id = 'contact' %}
+{% set page_title = 'Зв\'язатись' %}
+
+{% block content %}
+    <div class="text-block-wrapper">
+        <p>Якщо Вам потрібна наша допомога, будь-ласка зв'яжіться з нами. Заповніть форму нижче.</p>
+    </div>
+
+    <div class="fancy-contact-block-wrapper">
+        <form class="form-element" method="post" action="cgi-bin/subscribe.cgi">
+            <label class="input-wrapper">
+                <span class="label-wrapper"><span>Введіть свою E-mail адресу:</span></span>
+                <input type="email" name="email" size="45" required>
+            </label>
+            <label class="input-wrapper">
+                <span class="label-wrapper"><span>Коротко опишіть свою проблему:</span></span>
+                <input type="text" name="subject" size="60" required>
+            </label>
+            <div class="submit-wrapper">
+                <input type="submit" value="Надіслати запит">
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>{% if page_title is defined %}{{ page_title }} :: {% endif %}Волонтерське об'єднання "Останній шанс"</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/main.bundle.js"></script>
+</head>
+<body>
+{% if page_title is defined %}
+<div class="website-name-wrapper">Волонтерське об'єднання "Останній шанс"</div>
+{% endif %}
+<div class="disclaimer-wrapper">Вміст даного Веб-сайту є вигадкою і не має зв'язку з реальністю.</div>
+{% if page_title is defined %}
+<h1 class="page-name-wrapper">{{ page_title }}</h1>
+{% else %}
+<h1 class="page-name-wrapper">Волонтерське об'єднання "Останній шанс"</h1>
+{% endif %}
+
+<div class="website-menu-wrapper">
+    <button class="menu-trigger">Меню</button>
+    <ul>
+        {% for item in menu_items %}
+        <li{% if item.id == current_page_id %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

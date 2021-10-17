@@ -1,0 +1,68 @@
+{% extends "_page.html.twig" %}
+
+{% set current_page_id = 'people' %}
+{% set page_title = 'Люди' %}
+
+{% block content %}
+    <div class="text-block-wrapper">
+        <p>Ми - волонтери. І працюємо лише тому що відчуваємо свій вклад в майбутнє.</p>
+    </div>
+
+    <div class="person-card-list">
+        <div class="person-card-wrapper">
+            <div class="card-wrapper">
+                <div class="photo-wrapper">
+                    <img src="images/3f67d5e7-cb34-48e2-821e-19f1afac7c7a.jpg">
+                </div>
+                <div class="main-info-wrapper">
+                    <div class="info-item">
+                        <span class="label">Ім'я:</span>
+                        <span class="value"><span>Григорій Вільний</span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Вік:</span>
+                        <span class="value"><span>26 років</span></span>
+                    </div>
+                </div>
+                <div class="more-info-wrapper">
+                    <div class="info-item">
+                        <span class="label">Організація:</span>
+                        <span class="value"><span>ПНДІ "Чорна гора"</span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Посада:</span>
+                        <span class="value"><span>Старший дослідник</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="person-card-wrapper">
+            <div class="card-wrapper">
+                <div class="photo-wrapper">
+                    <img src="images/2196a7a2-6ccb-45ae-af0e-aeaceefe5ab1.jpg">
+                </div>
+                <div class="main-info-wrapper">
+                    <div class="info-item">
+                        <span class="label">Ім'я:</span>
+                        <span class="value"><span>Іван Гадюка</span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Вік:</span>
+                        <span class="value"><span>Не відомо</span></span>
+                    </div>
+                </div>
+                <div class="more-info-wrapper">
+                    <div class="info-item">
+                        <span class="label">Організація:</span>
+                        <span class="value"><span>ПВК "Військоі без меж"</span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Посада:</span>
+                        <span class="value"><span>Головнокомандувач</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
