@@ -6,7 +6,7 @@ module.exports = {
         main: __dirname + '/sources/js/index.js',
     },
     output: {
-        path: __dirname + '/js',
+        path: __dirname + '/web/js',
         filename: '[name].bundle.js',
     },
     resolve: {

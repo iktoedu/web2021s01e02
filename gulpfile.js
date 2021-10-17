@@ -31,7 +31,7 @@ let componentWrap = () => {
 
 let options = {
     sass_path: __dirname + '/sources/sass/',
-    css_path: __dirname + '/css/'
+    css_path: __dirname + '/web/css/'
 };
 
 let scssFiles = [
