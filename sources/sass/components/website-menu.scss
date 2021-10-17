@@ -2,8 +2,34 @@ body {
   text-align: center;
 }
 
+.menu-trigger {
+  border: none;
+  background: none;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  font-size: inherit;
+  padding: 12px;
+}
+
+body.menu-is-open {
+  .menu-trigger {
+    background-color: #d0d0d0;
+  }
+}
+
 ul {
   padding: 0;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+body.menu-is-open {
+  ul {
+    height: initial;
+  }
 }
 
 li {
@@ -25,6 +51,14 @@ li {
 }
 
 @media (min-width: 481px) {
+  .menu-trigger {
+    display: none;
+  }
+
+  ul {
+    height: initial;
+  }
+
   li {
     display: inline-block;
 

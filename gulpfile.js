@@ -8,6 +8,9 @@ const gulp = require('gulp'),
     postcss = require('postcss'),
     postcss_prefix_wrap = require('postcss-prefixwrap');
 
+const webpack = require('webpack'),
+    webpack_config = require('./webpack.config.js');
+
 let componentWrap = () => {
     function injectComponentPrefix(file, encoding, callback) {
         let fileName = file.path.replace(file.base, '');
@@ -42,6 +45,11 @@ gulp.task('clean:css', () => del([
     ], {force: true})
 );
 
+gulp.task('clean:js', () => del([
+        webpack_config.output.path + '/**/*.js',
+    ], {force: true})
+);
+
 gulp.task('build:css', gulp.series('clean:css', () => gulp.src(scssFiles)
     .pipe(sass({
         noCache: true,
@@ -52,4 +60,16 @@ gulp.task('build:css', gulp.series('clean:css', () => gulp.src(scssFiles)
     .pipe(gulp.dest(options.css_path))
 ));
 
-gulp.task('default', gulp.series('build:css'));
+gulp.task('build:js', gulp.series('clean:js', () => new Promise((resolve, reject) => {
+    webpack(webpack_config, (err, stats) => {
+        if (err) {
+            return reject(err);
+        }
+        if (stats.hasErrors()) {
+            return reject(new Error(stats.compilation.errors.join('\n')));
+        }
+        resolve();
+    });
+})));
+
+gulp.task('default', gulp.series('build:css', 'build:js'));

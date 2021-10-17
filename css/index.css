@@ -76,8 +76,27 @@ body {
 .website-menu-wrapper {
   text-align: center; }
 
+.website-menu-wrapper .menu-trigger {
+  border: none;
+  background: none;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  font-size: inherit;
+  padding: 12px; }
+
+.website-menu-wrapper.menu-is-open .menu-trigger {
+  background-color: #d0d0d0; }
+
 .website-menu-wrapper ul {
-  padding: 0; }
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  height: 0; }
+
+.website-menu-wrapper.menu-is-open ul {
+  height: initial; }
 
 .website-menu-wrapper li {
   list-style: none;
@@ -91,6 +110,10 @@ body {
     background-color: #d0d0d0; }
 
 @media (min-width: 481px) {
+  .website-menu-wrapper .menu-trigger {
+    display: none; }
+  .website-menu-wrapper ul {
+    height: initial; }
   .website-menu-wrapper li {
     display: inline-block; }
     .website-menu-wrapper li a {
