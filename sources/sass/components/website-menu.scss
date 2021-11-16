@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: block;
+
+  a {
+    display: block;
+    padding: 12px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &.active {
+    a {
+      background-color: #d0d0d0;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  li {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+    }
+  }
+}

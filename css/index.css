@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333333;
+  background-color: #f0f0f0; }
+
+.disclaimer-wrapper {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.75rem; }
+
+.fancy-contact-block-wrapper .form-element {
+  margin: 1rem 0; }
+
+.fancy-contact-block-wrapper .input-wrapper {
+  margin: 1rem 0;
+  display: block; }
+
+.fancy-contact-block-wrapper .label-wrapper {
+  display: block;
+  font-style: italic; }
+
+.fancy-contact-block-wrapper .submit-wrapper {
+  margin: 1rem 0; }
+
+.news-list-wrapper {
+  margin: 1rem 0; }
+
+.news-list-wrapper .item .date {
+  font-weight: bold;
+  padding: 2px;
+  background-color: #d0d0d0; }
+
+.news-list-wrapper .item .content p {
+  margin-top: 0; }
+
+.page-name-wrapper {
+  text-align: center; }
+
+.person-card-wrapper {
+  display: inline-block; }
+
+.person-card-wrapper .card-wrapper {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  width: 300px;
+  vertical-align: top; }
+
+.person-card-wrapper .photo-wrapper {
+  max-width: 60px;
+  float: left; }
+  .person-card-wrapper .photo-wrapper img, .person-card-wrapper .photo-wrapper ::slotted(img) {
+    width: 100%; }
+
+.person-card-wrapper .main-info-wrapper {
+  overflow: hidden;
+  padding-left: 5px; }
+  .person-card-wrapper .main-info-wrapper .info-item .label {
+    font-weight: bold;
+    font-style: italic; }
+
+.person-card-wrapper .more-info-wrapper {
+  margin-top: 1rem;
+  clear: both; }
+  .person-card-wrapper .more-info-wrapper .info-item {
+    font-size: 0.875rem; }
+    .person-card-wrapper .more-info-wrapper .info-item .label {
+      font-style: italic; }
+
+.text-block-wrapper p {
+  text-align: justify;
+  text-indent: 2rem; }
+
+.website-menu-wrapper {
+  text-align: center; }
+
+.website-menu-wrapper ul {
+  padding: 0; }
+
+.website-menu-wrapper li {
+  list-style: none;
+  display: block; }
+  .website-menu-wrapper li a {
+    display: block;
+    padding: 12px;
+    color: inherit;
+    text-decoration: none; }
+  .website-menu-wrapper li.active a {
+    background-color: #d0d0d0; }
+
+@media (min-width: 481px) {
+  .website-menu-wrapper li {
+    display: inline-block; }
+    .website-menu-wrapper li a {
+      display: inline-block; } }
+
+.website-name-wrapper {
+  text-align: center;
+  font-style: italic; }

@@ -1,0 +1,17 @@
+body {
+  margin: 1rem 0;
+}
+
+.item {
+  .date {
+    font-weight: bold;
+    padding: 2px;
+    background-color: #d0d0d0;
+  }
+
+  .content {
+    p {
+      margin-top: 0;
+    }
+  }
+}
